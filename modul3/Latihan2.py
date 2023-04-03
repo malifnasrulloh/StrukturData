@@ -33,8 +33,10 @@ class Queue:
             return self.list.index(element)
         return -1
     
-    def remove(self, element):
-        self.list.remove(element)
+    def remove(self):
+        temp = self.list[0]
+        self.list.remove(self.list[0])
+        return temp
     
     def size(self):
         return self.length
@@ -48,7 +50,7 @@ class Latihan2:
     queue.offer("PHP")
     queue.offer("HTML")
     
-    queue.remove("PHP")
+    print(queue.remove())
     
     print("Element : ", queue)
     print(queue.poll())
