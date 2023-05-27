@@ -37,8 +37,8 @@ public class BinaryTree {
 
     public void postOrder(Node node){
         if (node != null){
-            preOrder(node.left);
-            preOrder(node.right);
+            postOrder(node.left);
+            postOrder(node.right);
             System.out.print(node.data + "   ");
         }
     }
